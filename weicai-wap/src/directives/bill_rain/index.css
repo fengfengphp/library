@@ -1,0 +1,28 @@
+.rain-main-div{
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}
+
+.rain-img-child{
+    display: block;
+    width: 30px;height: 30px;
+    background: url('~@/assets/images/tg/qq/hb_1.png') no-repeat;
+    background-size: 100% 100%;
+}
+.rain-img-div {
+    position: absolute;top: 0;z-index: 100;
+    animation: aim_move 5s linear 1 forwards;
+}
+
+@keyframes aim_move {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(9rem);
+        transform: translateY(9rem);
+    }
+}

@@ -1,0 +1,141 @@
+/*公共红包样式*/
+.chat-li{
+    padding-bottom: 10px;
+    /*消息样式*/
+    .msg-div{
+        .msg-img-div{
+            float: left;
+            width: 40px;height: 40px;
+            border-radius: 4px;overflow: hidden;
+        }
+        .msg-div-content{
+            float: left;
+            margin-left: 10px;
+            .p-name{
+                font-size: 12px;color: #808080;
+                line-height: 22px;
+            }
+            .p-content{
+                word-break:break-all;
+                position: relative;box-sizing: border-box;
+                max-width: 210px;background-color: white;
+                border-radius: 4px;
+                padding: 10px 14px;
+                font-size: 14px;color: #333333;
+                line-height: 1.2;
+            }
+            .p-content:after{
+                display:block;
+                content:'';
+                border-width:4px 5px 4px 5px;
+                border-style:solid;
+                border-color: transparent #fff transparent transparent;
+
+                /* 定位 */
+                position:absolute;
+                left:-10px;
+                top:10px;
+                z-index: 100;
+            }
+        }
+    }
+    .msg-div-self{
+        .msg-img-div{
+            float: right;
+            width: 40px;height: 40px;
+            border-radius: 4px;overflow: hidden;
+        }
+        .msg-div-content{
+            float: right;
+            margin-right: 10px;
+            .p-content{
+                word-break:break-all;
+                position: relative;box-sizing: border-box;
+                max-width: 210px;background-color: #ffcdb7;
+                border-radius: 4px;
+                padding: 10px 14px;
+                font-size: 14px;color: #333333;
+                line-height: 1.2;
+            }
+            .p-content:after{
+                display:block;
+                content:'';
+                border-width:4px 5px 4px 5px;
+                border-style:solid;
+                border-color: transparent transparent transparent #ffcdb7;
+                /* 定位 */
+                position:absolute;
+                right:-10px;
+                top:10px;
+            }
+        }
+    }
+    .middle-msg{
+        margin: 10px auto;
+        text-align: center;
+        p{
+            display: inline-block;
+            padding: 0 14px;
+            border-radius: 4px;
+            height: 20px;background-color: #cccccc;
+            font-size: 12px;color: #f2f2f2;
+            line-height: 20px;
+        }
+    }
+    /*福利包样式*/
+    .welfare-red-left{
+        position: relative;
+        margin-left: -5px;
+        width: 215px;height: 90px;
+        background: url("../../assets/images/message/welfare_left_on.png") no-repeat;
+        background-size: 100% 100%;
+        .red-words{
+            position: absolute;top: 45px;left: 90px;z-index: 4;
+            font-size: 14px;color: white;
+            line-height: 14px;
+        }
+        .red-type{
+            position: absolute;left: 20px;bottom: 5px;z-index: 4;
+            font-size: 12px;color: #333333;
+            line-height: 12px;
+        }
+    }
+    .welfare-red-left-active{
+        background: url("../../assets/images/message/welfare_left_off.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    .welfare-red-right{
+        position: relative;
+        margin-right: -5px;
+        width: 215px;height: 90px;
+        background: url("../../assets/images/message/welfare_right_on.png") no-repeat;
+        background-size: 100% 100%;
+        .red-words{
+            position: absolute;top: 45px;left: 60px;z-index: 4;
+            font-size: 14px;color: white;
+            line-height: 14px;
+        }
+        .red-type{
+            position: absolute;left: 20px;bottom: 5px;z-index: 4;
+            font-size: 12px;color: #333333;
+            line-height: 12px;
+        }
+    }
+    .welfare-red-right-active{
+        background: url("../../assets/images/message/welfare_right_off.png") no-repeat;
+        background-size: 100% 100%;
+    }
+}
+/*抢包弹窗*/
+.getredpakebox{
+    height: 360px;
+    background:url('../../assets/images/message/redpacketbody.png') no-repeat;
+    background-size:100% 100%;
+    .open-rotate{
+        width: 80px;
+    }
+    .open-rotate-active{
+        transform: rotateY(5760deg);
+        transition: transform 16s linear;
+    }
+}

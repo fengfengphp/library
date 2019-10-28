@@ -1,0 +1,23 @@
+stages:
+- Test
+- Deploy
+#测试
+Test:
+  stage: Test
+  only:
+    - master
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  when: manual #手动确定才能构建
+  tags:
+  #- Test
+  script:
+    - pwd
+    - ls -l
+    - rsync -aztp ./ $SSH_USER@$SSH_HOST:/data/www-data/danbao-front
